@@ -1,4 +1,39 @@
 .content {
-    min-height: calc(100vh - 48px);
-    background: #ccc;
+    position: relative;
+    min-height: calc(100vh);
+}
+.content-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('/dist/lowbg.svg');
+    background-size: calc(12em + 95vw);
+    background-repeat: repeat;
+}
+.content-block {
+    position: relative;
+    margin: 0 auto;
+    padding: 0 20px;
+    max-width: 1220px;
+    z-index: 1;
+}
+.content-block-header {
+    text-align: center;
+}
+.content-block-header p {
+    font-size: 1.1em;
+    margin: 1.5em auto;
+    max-width: 300px;
+}
+.content-block-header video {
+    position: relative;
+    width: 100%;
+    max-width: 60em;
+    height: auto;
+    margin: 0;
+}
+.content-block-header > * {
+    margin-bottom: 40px;
 }
