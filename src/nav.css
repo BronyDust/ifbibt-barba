@@ -1,0 +1,102 @@
+#openmobile {
+    display: none;
+}
+
+.global-nav {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    font-size: 16px;
+    line-height: 16px;
+    height: 48px;
+    background: #fff;
+}
+.global-nav-wrapper {
+    margin: 0 auto;
+    padding: 0 20px;
+    max-width: 1220px;
+    display: flex;
+    align-items: center;
+}
+.global-nav-logo {
+    display: flex;
+    align-items: center;
+}
+.global-nav-logo img {
+    width: 32px;
+    height: auto;
+    margin: 8px;
+}
+
+.global-nav-items {
+    flex-grow: 1;
+    display: flex;
+}
+.global-nav-items > a {
+    position: relative;
+    display: block;
+    flex-grow: 0;
+    padding: 16px 8px;
+    text-decoration: none;
+    color: #569679;
+}
+.global-nav-items > a:hover:after {
+    content: '';
+    position: absolute;
+    width: calc(100% - 16px);
+    height: 2px;
+    background: #569679;
+    bottom: 9px;
+    left: 8px;
+}
+
+.global-nav-paction {
+    display: flex;
+    align-items: center;
+}
+
+.global-nav-openmobile,
+.global-nav-name {
+    display: none;
+}
+
+@media screen and (max-width: 600px) {
+    .global-nav-wrapper {
+        justify-content: space-between;
+    }
+    .global-nav-openmobile {
+        cursor: pointer;
+        display: block;
+    }
+    .global-nav-items {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        box-sizing: border-box;
+        height: calc(100% - 48px);
+        background: #fff;
+        transform: translateX(-150%);
+        padding: 20px 8px;
+        width: 208px;
+        transition: .2s ease-out;
+        flex-direction: column;
+    }
+    .global-nav-items > * {
+        padding: 16px 8px;
+    }
+    .global-nav-name {
+        display: block;
+    }
+    #openmobile:checked + .global-nav-wrapper .global-nav-items {
+        transform: translateX(0);
+    }
+    .global-nav-openmobile-close {
+        display: none !important;
+    }
+    #openmobile:checked + .global-nav-wrapper .global-nav-openmobile-close {
+        display: block !important;
+    }
+    #openmobile:checked + .global-nav-wrapper .global-nav-openmobile-open {
+        display: none !important;
+    }
+}

@@ -1,0 +1,68 @@
+@font-face {
+    font-family: 'Branschift';
+    src: url('/dist/BAHNSCHRIFT.TTF');
+}
+
+body {
+    margin: 0;
+    background: #fff;
+    font-size: 15px;
+    font-family: 'Segoe UI','SegoeUI',"Helvetica Neue",Helvetica,Arial,sans-serif;
+    min-width: 320px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.flex-separator {
+    flex-grow: 10;
+}
+
+.btn {
+    margin: 0 !important;
+    text-decoration: none !important;
+    position: relative;
+    font-size: 14px;
+    font-weight: 400;
+    box-sizing: border-box;
+    display: inline-block;
+    text-align: center;
+    cursor: pointer;
+    padding: 0 16px !important;
+    min-width: 80px;
+    height: 32px;
+    user-select: none;
+    outline: transparent;
+    border: 1px #569679 solid;
+    background: transparent;
+    border-radius: 2px;
+    color: #569679;
+}
+.btn:hover,
+.btn:active {
+    background: #f3f2f1;
+}
+.btn.primary {
+    background: #569679;
+    color: #fff;
+}
+.btn.primary:hover,
+.btn.primary:active {
+    background: #43765f;
+}
+.btn-fc {
+    display: flex;
+    height: 100%;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+}
+.btn-tc {
+    flex-grow: 1;
+    display: block;
+}
+.btn-t {
+    margin: 0 4px;
+    line-height: 100%;
+    display: block;
+    font-weight: 600;
+}
