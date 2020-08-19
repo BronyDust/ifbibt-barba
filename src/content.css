@@ -1,6 +1,9 @@
 .content {
     position: relative;
-    min-height: calc(100vh);
+    box-sizing: border-box;
+    padding-top: 48px;
+    min-height: 100vh;
+    overflow: hidden;
 }
 .content-bg {
     position: absolute;
@@ -15,7 +18,7 @@
 .content-block {
     position: relative;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 50px 20px 0 20px;
     max-width: 1220px;
     z-index: 1;
 }

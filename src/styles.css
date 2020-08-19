@@ -73,3 +73,7 @@ h1 {
     margin: auto;
     font-weight: 700;
 }
+.global-wrapper {
+    overflow-x: hidden;
+    width: 100%;
+}

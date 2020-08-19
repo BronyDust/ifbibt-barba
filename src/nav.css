@@ -3,8 +3,8 @@
 }
 
 .global-nav {
-    position: -webkit-sticky;
-    position: sticky;
+    position: fixed;
+    width: 100%;
     top: 0;
     font-size: 16px;
     line-height: 16px;
@@ -71,9 +71,8 @@
     }
     .global-nav-items {
         position: fixed;
-        bottom: 0;
+        top: 48px;
         left: 0;
-        box-sizing: border-box;
         height: calc(100% - 48px);
         background: #fff;
         transform: translateX(-150%);
