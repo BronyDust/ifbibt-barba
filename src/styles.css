@@ -66,14 +66,28 @@ body {
     display: block;
     font-weight: 600;
 }
-
-h1 {
-    max-width: 13em;
-    font-size: calc(2em + 2vw);
-    margin: auto;
-    font-weight: 700;
-}
 .global-wrapper {
     overflow-x: hidden;
     width: 100%;
 }
+
+h1, h2 {
+    font-size: calc(2em + 2vw);
+    line-height: 110%;
+    margin: 10px auto;
+    font-weight: 700;
+}
+@media (min-width: 1800px) {
+    h1, h2 {
+      font-size: 4em;
+    }
+}
+  
+h1 {
+    max-width: 13em;
+}
+  
+h3 {
+    font-size: calc(1.5em + 1vw);
+  }
+  

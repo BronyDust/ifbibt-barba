@@ -5,7 +5,7 @@ import './nav.css';
 import './styles.css';
 
 function closeMenuOnAnyClick() {
-    const nav = document.querySelector('.global-nav-items');
+    const nav = document.querySelector('.global-mobile-nav-items');
     const openTrigger = document.getElementById('openmobile');
     nav.addEventListener('click', () => {
         openTrigger.checked = false;

@@ -5,6 +5,22 @@
     min-height: 100vh;
     overflow: hidden;
 }
+.content a {
+    display: flex;
+    align-content: center;
+    text-decoration: none;
+    color: #000;
+}
+.content a i {
+    display: inline-block;
+    font-size: 16px;
+    line-height: 20px;
+    margin-right: 4px;
+}
+.content a:hover {
+    text-decoration: none;
+    color: #7dc5a5;
+}
 .content-bg {
     position: absolute;
     top: 0;
@@ -18,9 +34,17 @@
 .content-block {
     position: relative;
     margin: 0 auto;
-    padding: 50px 20px 0 20px;
+    padding: calc(5vw + 3vh) 20px 0 20px;
     max-width: 1220px;
     z-index: 1;
+}
+@media screen and (min-width: 1900px) {
+    .content-block {
+        padding-top: 120px;
+    }
+}
+.content-block > section:not(:first-child) {
+    padding: 50px 0;
 }
 .content-block-header {
     text-align: center;
@@ -35,8 +59,43 @@
     width: 100%;
     max-width: 60em;
     height: auto;
-    margin: 0;
+    margin-top: calc(2vw + 2vh);
+}
+@media screen and (min-width: 2420px) {
+    .content-block-header video {
+        margin-top: 60px;
+    }
 }
 .content-block-header > * {
     margin-bottom: 40px;
+}
+.content-mirror {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.content-mirror > div {
+    flex-grow: 0;
+}
+.content-mirror > div:first-child {
+    margin-right: 1em;
+    flex-basis: 450px;
+    text-align: right;
+}
+.content-mirror > div:last-child {
+    margin-left: 1em;
+    flex-basis: 700px;
+}
+.content-mirror a {
+    justify-content: flex-end;
+}
+@media (max-width: 1400px) {
+    .content-mirror > div {
+        flex-grow: 1;
+        margin: 1em 0 !important;
+        text-align: left !important;
+    }
+    .content-mirror a {
+        justify-content: flex-start;
+    }
 }
