@@ -9,10 +9,8 @@
 </head>
 <body data-barba="wrapper">
     <div data-barba="container" class="global-wrapper" data-barba-namespace="home">
-        
         <input type="checkbox" id="openmobile">
         <header class="global-nav">
-
             <div class="global-nav-wrapper">
                 <label class="global-nav-openmobile" for="openmobile">
                     <i class="material-icons global-nav-openmobile-open">menu</i>
@@ -24,7 +22,6 @@
                 </a>
                 <nav class="global-nav-items">
                     <a href="#about">Об институте</a>
-                    <a href="#programs">Программы</a>
                     <div class="flex-separator"></div>
                     <div class="global-nav-paction">
                         <a href="/admission.html"div class="btn primary">
@@ -42,7 +39,6 @@
         </header>
         <nav class="global-mobile-nav-items">
             <a href="#about">Об институте</a>
-            <a href="#programs">Программы</a>
             <div class="flex-separator"></div>
             <div class="global-nav-paction">
                 <a href="/admission.html"div class="btn primary">
@@ -57,11 +53,14 @@
             </div>
         </nav>
         <main class="content">
-            <div class="content-block parallax">
+            <div class="content-block">
                 <section class="content-block-header">
                     <h1>Где возможность становится реальностью</h1>
                     <p>Институт фундаментальной биологии и биотехнологии <strong>СФУ</strong></p>
-                    <video src="/dist/intro.mp4" autoplay loop muted poster="dist/intro.jpg" controls></video>
+                    <video autoplay loop muted poster="dist/intro.jpg" controls>
+                        <source src="/dist/intro.webm" type="video/webm">
+                        <source src="/dist/intro.mp4" type="video/mp4">
+                    </video>
                 </section>
                 <section class="content-block-about" id="about">
                     <div class="content-mirror">
@@ -92,7 +91,28 @@
             </div>
             <div class="content-bg parallax"></div>
         </main>
-        
+        <footer class="footer">
+            <div class="wrap">
+                <span>
+                    <a href="http://www.sfu-kras.ru">
+                        <img loading="lazy" src="/dist/sfu-logo.png" width="250" height="61" alt="Логотип СФУ">
+                    </a>
+                    <a href="http://www.sfu-kras.ru/sveden">Сведения об образовательной организации</a>
+                </span>
+                <span>
+                    <span>Единая справочная служба<a href="tel:+73912062222">+7 (391) 206-22-22</a></span>
+                    <span>Приемная комиссия<a href="tel:+73912062004">+7 (391) 206-20-04</a></span>
+                    <a href="http://about.sfu-kras.ru/contact">Контакты</a>
+                </span>
+            </div>
+            <strong>При использовании текстовых и графических материалов ссылка на сайт обязательна</strong>
+            <span class="copyright">© 2008–2020 Институт фундаментальной биологии и биотехнологии, СФУ</span>
+        </footer>
+    </div>
+    <script
+        crossorigin="anonymous"
+        src="https://polyfill.io/v3/polyfill.min.js?features=default%2CArray.prototype.find%2CIntersectionObserver"
+    ></script>
     <script src="/dist/statics/main.js"></script>
 </body>
 </html>

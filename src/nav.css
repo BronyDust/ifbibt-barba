@@ -71,6 +71,12 @@
     .global-nav-openmobile {
         cursor: pointer;
         display: block;
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
     }
     .global-mobile-nav-items {
         box-sizing: border-box;

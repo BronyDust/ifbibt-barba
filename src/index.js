@@ -3,20 +3,43 @@ import gsap, {Power2} from 'gsap';
 import './content.css';
 import './nav.css';
 import './styles.css';
+import './footer.css';
 
 function closeMenuOnAnyClick() {
     const nav = document.querySelector('.global-mobile-nav-items');
     const openTrigger = document.getElementById('openmobile');
-    nav.addEventListener('click', () => {
+    nav.onclick = () => {
         openTrigger.checked = false;
-    });
+    };
+}
+
+let blockScrollHandling = false;
+let parallaxBlock = null;
+
+function scrollParallaxHandler() {
+    if (blockScrollHandling) return;
+    blockScrollHandling = true;
+
+    const scrolledPercent = Math.floor(window.pageYOffset / (document.body.scrollHeight - document.documentElement.clientHeight) * 100);
+    const availableHeight = Math.floor(parallaxBlock.offsetHeight * .3);
+
+    gsap.to(parallaxBlock, .5, {scale: 1.3, y: availableHeight / 100 * scrolledPercent});
+    setTimeout(() => {
+        blockScrollHandling = false;
+    }, 100);
+}
+
+function initParallax() {
+    if (!parallaxBlock) return;
+    parallaxBlock.style.transformOrigin = 'top';
+    parallaxBlock.style.transform = 'scale(1.5)';
+
+    window.addEventListener('scroll', scrollParallaxHandler);
+    window.addEventListener('resize', scrollParallaxHandler);
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-    closeMenuOnAnyClick();
-
     barba.init({
-        debug: true,
         transitions: [{
             name: 'enter-animation',
             once: ({next}) => new Promise((res, rej) => {
@@ -94,7 +117,22 @@ document.addEventListener('DOMContentLoaded', () => {
                 });
                 setTimeout(() => res(), 300);
             })
-        }
-    ]
+        }]
+    });
+
+    function frontLogic() {
+        //closeMenuOnAnyClick();
+        
+        blockScrollHandling = false;
+        parallaxBlock = document.querySelector('.parallax') || null;
+        initParallax();
+    }
+
+    barba.hooks.once(() => frontLogic());
+    barba.hooks.after(() => frontLogic());
+
+    barba.hooks.beforeLeave(() => {
+        window.removeEventListener('scroll', scrollParallaxHandler);
+        window.removeEventListener('resize', scrollParallaxHandler)
     });
 });

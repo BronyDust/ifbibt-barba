@@ -8,9 +8,9 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <body data-barba="wrapper">
-    <div data-barba="container" class="global-wrapper"  data-barba-namespace="admission">
-        <header class="global-nav" data-custom-navbar>
-            <input type="checkbox" id="openmobile">
+    <div data-barba="container" class="global-wrapper" data-barba-namespace="home">
+        <input type="checkbox" id="openmobile">
+        <header class="global-nav">
             <div class="global-nav-wrapper">
                 <label class="global-nav-openmobile" for="openmobile">
                     <i class="material-icons global-nav-openmobile-open">menu</i>
@@ -21,8 +21,6 @@
                     <img src="/dist/logo.png" alt="Эмблема ИФБиБТ">
                 </a>
                 <nav class="global-nav-items">
-                    <a href="#about">Бакалавриат</a>
-                    <a href="#programs">Магистратура</a>
                     <div class="flex-separator"></div>
                     <div class="global-nav-paction">
                         <a href="/"div class="btn primary">
@@ -38,17 +36,48 @@
                 </nav>
             </div>
         </header>
+        <nav class="global-mobile-nav-items">
+            <div class="flex-separator"></div>
+            <div class="global-nav-paction">
+                <a href="/"div class="btn primary">
+                    <span class="btn-fc">
+                        <span class="btn-tc">
+                            <span class="btn-t">
+                                Об институте
+                            </span>
+                        </span>
+                    </span>
+                </a>
+            </div>
+        </nav>
         <main class="content">
-            <div class="content-block parallax">
-                <section class="content-block-header">
-                    <h1>Как к нам поступить?</h1>
-                    <p>В связи с пандемией COVID-19 возможны изменения в сроках и способах подачи документов. Следите за информацией на сайте.</p>
-                    <video src="/dist/intro.mp4" autoplay loop muted poster="dist/intro.jpg" controls></video>
-                </section>
+            <div class="content-block">
+                
             </div>
             <div class="content-bg parallax"></div>
         </main>
-        
+        <footer class="footer">
+            <div class="wrap">
+                <span>
+                    <a href="http://www.sfu-kras.ru">
+                        <img loading="lazy" src="/dist/sfu-logo.png" width="250" height="61" alt="Логотип СФУ">
+                    </a>
+                    <a href="http://www.sfu-kras.ru/sveden">Сведения об образовательной организации</a>
+                </span>
+                <span>
+                    <span>Единая справочная служба<a href="tel:+73912062222">+7 (391) 206-22-22</a></span>
+                    <span>Приемная комиссия<a href="tel:+73912062004">+7 (391) 206-20-04</a></span>
+                    <a href="http://about.sfu-kras.ru/contact">Контакты</a>
+                </span>
+            </div>
+            <strong>При использовании текстовых и графических материалов ссылка на сайт обязательна</strong>
+            <span class="copyright">© 2008–2020 Институт фундаментальной биологии и биотехнологии, СФУ</span>
+        </footer>
+    </div>
+    <script
+        crossorigin="anonymous"
+        src="https://polyfill.io/v3/polyfill.min.js?features=default%2CArray.prototype.find%2CIntersectionObserver"
+    ></script>
     <script src="/dist/statics/main.js"></script>
 </body>
 </html>
